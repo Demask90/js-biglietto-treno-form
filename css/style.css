@@ -4,6 +4,83 @@
     box-sizing: border-box;
 }
 
-#box_ticket{
-    display: none;
+/* COMMON */
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+ 
+.c_flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.align_items {
+    align-items: center;
+}
+
+/* COMMON */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+    padding-bottom: 40px;
+}
+
+.container h1{
+    width: 90%;
+    margin: 0 auto ;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.box, .box_input {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.input_element {
+    background-color: white;
+    width: calc(90% / 3);
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.input_element input, .input_element select {
+    padding: 3px;
+}
+
+#display_none {
+ display: none;
+}
+
+#box_ticket{ 
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#box_ticket #ticket_user {
+    padding: 5px;
+    height: 100px;
+    width: 100%
+}
+
+#box_ticket #ticket_user .grey{
+    background-color: gray;
+    padding: 10px 20px;
+}
+
+#box_ticket #ticket_user div:not(:first-of-type) {
+    margin: 0 20px;
 }
