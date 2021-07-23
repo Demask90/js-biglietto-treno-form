@@ -40,7 +40,7 @@ btnPrice.addEventListener('click',
         document.getElementById("carriage_seat_user").innerHTML = carriage_seat_user;
 
         // CODICE CP (numero casuale tra 90000 e 100000 escluso)
-        var number_ticket_user = Math.floor(Math.random() * (99999 - 90000)) + 90000;
+        var number_ticket_user = Math.floor(Math.random() * (100000 - 90000)) + 90000;
         console.log(number_ticket_user);
 
         // CODICE CP - STAMPA del codice cp (numero identificativo biglietto)

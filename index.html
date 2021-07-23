@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>biglietto treno form</title>
 </head>
 <body>
-    
+    <div>
+        
+    </div>
     <div class="container">
         <h1 style="color: white;">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-        <div class="box">
-            <div class="box_input flex align_items">
+        <div class="box_input">
+            <div class="row_input flex align_items">
 
                 <!-- input per nome e cognome -->
-                <div class="input_element c_flex">   
+                <div class="col c_flex">   
                     <label style="color: brown;" for="name">Nome Cognome:</label>
                     <input type="text"  style="text-align: center;" name="name" id="id_user" placeholder="Nome e Cognome">
                 </div>
                   <!-- input per nome e cognome -->
+
                 <!-- input per Kilometri -->
-                <div class="input_element c_flex">
+                <div class="col c_flex">
                     <label  style="color: brown;" for="km">Km da percorrere:</label>
                     <input type="number" style="text-align: center;" name="Km" id="km_user" placeholder="Chilometri">
                 </div>
-            
                 <!-- input per kilometri -->
     
                 <!-- input per fascia d'età -->
-                <div class="input_element c_flex">
+                <div class="col c_flex">
                     <label  style="color: brown;" for="age_user">Fascia d'età</label>
                     <select name="age_user" id="age_user">
                         <option value="standard">Maggiorenne</option>
@@ -40,50 +45,53 @@
                 <!-- input per fascia d'età -->
             </div>    
 
-            <!-- Pulsante che su Js gestisce il nome e cognome, il prezzo del biglietto, il tipo di offerta, il numero carrozza e codice CP  -->
-            <button style="padding: 3px;" id="btn_price_ticket" name="btn_price_ticket">Genera</button>
-            <!-- Pulsante che su Js gestisce il nome e cognome, il prezzo del biglietto, il tipo di offerta, il numero carrozza e codice CP  -->
+            <div class="row_button">
+                <!-- Pulsante che su Js gestisce il nome e cognome, il prezzo del biglietto, il tipo di offerta, il numero carrozza e codice CP  -->
+                <button id="btn_price_ticket" name="btn_price_ticket">Genera</button>
+                <!-- Pulsante che su Js gestisce il nome e cognome, il prezzo del biglietto, il tipo di offerta, il numero carrozza e codice CP  -->
 
-            <!-- Pulsante che su Js cancella il biglietto del cliente e azzera gli input -->
-            <button style="padding: 3px;" id="btn_calcel" name="btn_cancel">Annulla</button>
-            <!-- Pulsante che su Js cancella il biglietto del cliente e azzera gli input -->
+                <!-- Pulsante che su Js cancella il biglietto del cliente e azzera gli input -->
+                <button id="btn_calcel" name="btn_cancel">Annulla</button>
+                <!-- Pulsante che su Js cancella il biglietto del cliente e azzera gli input -->
+            </div>
+            
        
         </div>
-        
+
         
         <div id="display_none">
             
-            <h1  style="color: white;">IL TUO BIGLIETTO</h1>
+            <h1 style="color: white;">IL TUO BIGLIETTO</h1>
 
             <div id="box_ticket">
     
-                <h3>DETTAGLIO PASSEGGERO</h3>
+                <h2>DETTAGLIO PASSEGGERO</h3>
     
                 <div id="ticket_user" class="flex">
     
                     <div class="grey c_flex">
                         <h3 style="font-weight: bold;">NOME PASSEGGERO</h3>    
-                        <h3 id="name_surname" ></h3>
+                        <h3 class="data_user" id="name_surname" ></h3>
                     </div>
                     
                     <div class="c_flex">
                         <div style="font-weight: bold;">Offerta</div>
-                        <div id="offer_user"></div>
+                        <div class="data_user" id="offer_user"></div>
                     </div>
                     
                     <div class="c_flex">
                         <div style="font-weight: bold;">Carrozza - Posto</div>
-                        <div id="carriage_seat_user"></div>         
+                        <div class="data_user" id="carriage_seat_user"></div>         
                     </div>
                     
                     <div class="c_flex">
                         <div style="font-weight: bold;">Codice CP</div>
-                    <div id="number_ticket_user"></div>    
+                        <div class="data_user" id="number_ticket_user"></div>    
                     </div>
                     
                     <div class="c_flex">
                         <div style="font-weight: bold;">Costo biglietto</div>
-                        <div style="font-size: 2em; font-weight: bold;" id="price_ticket_user"></div>
+                        <div class="data_user"  id="price_ticket_user" style="font-size: 2em; font-weight: bold;"></div>
                     </div>
     
                 </div> 
